@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Méteo-monde</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+<script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+<script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h1 class="text-center my-5">Quel temps fait-il aujourd'hui ?</h1>
+                <div id="error" class="alert alert-danger text-center" style="display: none;"></div>
+
+                <form id="form">
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="city" placeholder="Paris"/></div>
+                    <button type="submit" class="btn btn-primary btn-block">Rechercher</button>
+                  </form>
+
+                  <div class="card mt-5" id="display-div" style="display: none;">
+                    <div class="card-body text-center">
+                      <h2 id="cityDisplay" style="text-transform: capitalize"></h2>
+                      <img id="icon" src="" alt="">
+                      <h1><span id="temp"></span><sup>°</sup></h1>
+                      <p><span id="weather" style="text-transform: capitalize"></span></p>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
